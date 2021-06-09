@@ -2,11 +2,11 @@
 title: HTML
 date: 2016-06-05 18:50:13
 updated: 2016-06-05 18:50:13
-tags: 前端知识
+tags: HTML
 ---
 # 网站是什么
 
-[参考](http://c.biancheng.net/view/7410.html)
+[参考资料](http://c.biancheng.net/view/7410.html)
 
 网站是由一个一个网页构成的，要想理解网站是什么，首先要理解网页是什么
 

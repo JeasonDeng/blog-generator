@@ -9,7 +9,6 @@ tags: CSS
 层叠样式表，通过样式表对网页进行装饰
 
 [CSS 参考手册](<http://www.w3school.com.cn/cssref/index.asp>)
-<!--more-->
 
 ## 样式表的组成
 
@@ -45,43 +44,47 @@ tags: CSS
 
 1. 内联样式  (只对当前标签起作用)
 
-- 写到元素的 style 属性当中
-  - 内联样式不方便复用
+   - 写到元素的 style 属性当中
 
-```html
-<p style="color: red; font-size: 16px;">
-    锄禾日当午
-</p>
-```
+   - 内联样式不方便复用
+
+     ```html
+     <p style="color: red; font-size: 16px;">
+         锄禾日当午
+     </p>
+     ```
 
 2. 内部样式
 
-- 写到 head 标签的 style 标签里
+   - 写到 head 标签的 style 标签里
 
-```html
-<style type="text/css">
-    p {
-        color: red;
-        font-size: 10px;
-    }
-</style>
-```
+     ```html
+     <style type="text/css">
+         p {
+             color: red;
+             font-size: 10px;
+         }
+     </style>
+     ```
 
 3. 外部样式  (推荐方式)
 
-- 写在单独的 .css 文件里
-  - 样式可以复用
-  - 通过 link 标签引入, 可以利用浏览器的缓存, 加快用户访问速度, 提高用户体验
+   - 写在单独的 .css 文件里
 
-```html
-<link href="style.css" rel="stylesheet" type="text/css" />
-```
+   - 样式可以复用
+
+   - 通过 link 标签引入, 可以利用浏览器的缓存, 加快用户访问速度, 提高用户体验
+
+     ```html
+     <link href="style.css" rel="stylesheet" type="text/css" />
+     ```
 
 # CSS 语法
 
-- 选择器  声明块
-  - 选择器 —— 选中页面中指定的元素
-  - 声明块 —— 紧跟在选择前后边, 使用一对 {} 括起来, 声明块中实际上是一组组的名值对, 这一组组的名值对我们称为声明, 一个声明块中可以写多个声明
+选择器  声明块
+
+- 选择器 —— 选中页面中指定的元素
+- 声明块 —— 紧跟在选择前后边, 使用一对 {} 括起来, 声明块中实际上是一组组的名值对, 这一组组的名值对我们称为声明, 一个声明块中可以写多个声明
 
 # CSS 基础选择器
 
@@ -211,7 +214,7 @@ a:active {}
 input:focus {}
 ```
 
- + **:hover  和 :active  也可以设置给其它元素**
+⚠️ **:hover  和 :active  也可以设置给其它元素**
 
 ## 伪元素选择器
 
@@ -292,9 +295,9 @@ p:nth-of-type(n) {}
 
 ### 区分 nth-child 和 nth-of-type
 
-Nth-child —— 父元素的的第几个是不是该元素
+nth-child —— 父元素的的第几个是不是该元素
 
-Nth-of-type —— 父元素中的第几个该类型的元素
+nth-of-type —— 父元素中的第几个该类型的元素
 
 ```html
 <div class="box">
@@ -379,9 +382,11 @@ body {
 
 `font: italic bold 30px/行高 "微软雅黑"`
 
-- 斜体、加粗、小型大写字母没有顺序要求, 也可以不写; 如果不写, 则使用默认值
-- 行高也可以不写; 如果不写, 则使用默认值
-- 大小和字体 `必须写`, 字体必须是`最后一个`, 大小是 `倒数第二个`
+1. 斜体、加粗、小型大写字母没有顺序要求, 也可以不写; 如果不写, 则使用默认值
+
+2. 行高也可以不写; 如果不写, 则使用默认值
+
+3. 大小和字体 `必须写`, 字体必须是`最后一个`, 大小是 `倒数第二个`
 
 ## 自定义字体图标的使用
 
@@ -416,8 +421,9 @@ body {
 
 ## 如何获得自定义图标的编码(就是 content 的内容呢?)
 
-- 如果是下载第三方图标, 下载时会附带
-- 如果是自己做的图标, [iconMoon在线字体生成](https://icomoon.io/)
+如果是下载第三方图标, 下载时会附带
+
+如果是自己做的图标, [iconMoon在线字体生成](https://icomoon.io/)
 
 # 文本样式
 
@@ -468,7 +474,8 @@ body {
   - dotted - 点线
   - dashed - 虚线
   - double - 双线
-- `简写`:  border: 1px solid #ccc;
+
+`简写`:  border: 1px solid #ccc;
 
 ## border 的实际应用
 
@@ -501,7 +508,7 @@ body {
 
 2. 三角形(*各种方向三角形*) [参考](https://www.jb51.net/article/42513.htm)
 
-   ![](/Volumes/TOSHIBA EXT/笔记/border-triangle.jpg)
+   ![](/images/border-triangle.jpg)
 
    ```css
    #triangle-up {
@@ -715,21 +722,21 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
 
 ### 浏览器默认样式
 
-- 清除浏览器默认样式
+清除浏览器默认样式
 
-- ```css
-  /* 性能不是很好, 不常用 */
-  * {
-      margin: 0;
-      padding: 0;
-  }
-  ```
+```css
+/* 性能不是很好, 不常用 */
+* {
+    margin: 0;
+    padding: 0;
+}
+```
 
 ### 文档流
 
-- 文档流处在网页的最底层, 它表示的是一个页面中的位置
+文档流处在网页的最底层, 它表示的是一个页面中的位置
 
-  我们所创建的元素默认都处在文档流中
+我们所创建的元素默认都处在文档流中
 
 - 元素在文档流中的特点
 
@@ -743,19 +750,25 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
 
 ### 浮动
 
-- float 使元素浮动, 脱离文档流
-  - left —— 左浮动
-  - right —— 右浮动
-- 浮动只会影响它 `后面的元素`
+float 使元素浮动, 脱离文档流
 
-- 浮动的元素不会超过它上边的兄弟元素
-- 浮动的元素 `不会盖住文字`, 文字会自动环绕在浮动元素的周围
-  - 所以, 可以通过设置浮动来做 `文字环绕图片` 效果
-- 浮动元素的默认宽高由内容撑开
+- left —— 左浮动
+- right —— 右浮动
+
+浮动的特点：
+
+1. 浮动只会影响它 `后面的元素`
+
+2. 浮动的元素不会超过它上边的兄弟元素
+
+3. 浮动的元素 `不会盖住文字`, 文字会自动环绕在浮动元素的周围
+   - 所以, 可以通过设置浮动来做 `文字环绕图片` 效果
+
+4. 浮动元素的默认宽高由内容撑开
 
 ### 高度塌陷问题
 
-- 在文档流中, 父元素的高度默认由子元素撑开
+在文档流中, 父元素的高度默认由子元素撑开
 
 - 当子元素浮动以后, 子元素脱离文档流, 导致父元素高度塌陷, 影响网页布局
 
@@ -793,36 +806,40 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
 
 ### clear (只对块级元素起作用)
 
-- 清除其他浮动(兄弟)元素对当前元素的影响 (位置不会顶上去)
-  - none: 默认值
-  - left —— 清除左侧浮动元素对当前元素的影响
-  - right —— 清除右侧浮动元素对当前元素的影响
-  - both —— 清除两侧浮动元素对当前元素的影响, 其实是清除影响大的
+清除其他浮动(兄弟)元素对当前元素的影响 (位置不会顶上去)
+
+- none: 默认值
+- left —— 清除左侧浮动元素对当前元素的影响
+- right —— 清除右侧浮动元素对当前元素的影响
+- both —— 清除两侧浮动元素对当前元素的影响, 其实是清除影响大的
 
 ### BFC(Block Formatting Context)
 
-- 根据 W3C 的标准, 在页面中的元素都有一个隐含的属性, 叫 BFC (`块级格式化环境`)
+根据 W3C 的标准, 在页面中的元素都有一个隐含的属性, 叫 BFC (`块级格式化环境`)
 
-  该属性可以设置打开或关闭, 默认时关闭的;
+- 该属性可以设置打开或关闭, 默认时关闭的;
 
-  当开启元素的 BFC 后, 元素将会有如下特性:
+当开启元素的 BFC 后, 元素将会有如下特性:
 
-  + 父元素的垂直外边距不会和子元素重叠
-  + 开启 BFC 的元素不会被浮动元素所覆盖 (会显示在浮动元素的同一行)
+1. 父元素的垂直外边距不会和子元素重叠
 
-  - 开启 BFC 的元素可以包含浮动的子元素, 高度不会塌陷
+2. 开启 BFC 的元素不会被浮动元素所覆盖 (会显示在浮动元素的同一行)
 
-- 开启 BFC 的方式
+3. 开启 BFC 的元素可以包含浮动的子元素, 高度不会塌陷
 
-  - 设置元素浮动 (不好用)
-  - 设置元素绝对定位 (不好用)
-  - 设置元素为 inline-block (不好用)
-  - 设置元素 overflow: hidden/auto; (常用)
+开启 BFC 的方式
+
+- 设置元素浮动 (不好用)
+- 设置元素绝对定位 (不好用)
+- 设置元素为 inline-block (不好用)
+- 设置元素 overflow: hidden/auto; (常用)
 
 ### 定位
 
-- 将指定的元素摆放到页面的额任意位置
-  - 通过定位可以任意摆放元素
+将指定的元素摆放到页面的额任意位置
+
+- 通过定位可以任意摆放元素
+
 - position  (<font color=#c00>`子绝父相`</font>)
   - static —— 默认值, 不开启定位
   - relative —— 相对定位
@@ -849,10 +866,13 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
 
 ### opacity
 
-- 透明度
-  - opacity: 0.5  (0-1之间的小数)
-  - IE8 以下使用
-    - filter: alpha(opacity=50)
+透明度
+
+- opacity: 0.5  (0-1之间的小数)
+
+IE8 以下使用
+
+- filter: alpha(opacity=50)
 
 ### CSS背景
 
@@ -885,10 +905,6 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
   - background: #ccc url() center center no-repeat fixed;
   - 没有顺序要求, 也没有数量要求, 如果不写就采用默认值
 
-# 
-
-
-
 - 相对路径写在哪就是相对于哪个文件
 
 ### 背景图片切换时的闪烁问题
@@ -909,7 +925,7 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
 
   - 只对 ie 浏览器有效, 其他浏览器都会将它识别为注释
 
-  - ```html
+    ```css
     <!-- 只会出现在 IE6 中 -->
     <!--[if IE 6]>
         <p>远离 IE6 </p>
@@ -923,20 +939,21 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
 
 - 属性 hack
 
-  - ```css
-    body {
-        background-color: red;
-        _background-color: red; /* 只有 ie6 及以下可识别 */ 
-        *background-color: red; /* 只有 ie7 及以下可识别 */
-        background-color: red\0; /* 只有 ie8 以上可识别 */
-    }
-    ```
+  ```css
+  body {
+      background-color: red;
+      _background-color: red; /* 只有 ie6 及以下可识别 */ 
+      *background-color: red; /* 只有 ie7 及以下可识别 */
+      background-color: red\0; /* 只有 ie8 以上可识别 */
+  }
+  ```
 
 # 命名规范
 
-- id 和 class 命名规范
-  - 尽量英文
-  - 驼峰命名法  或  _ 连接  或  -连接
+id 和 class 命名规范
+
+- 尽量英文
+- 驼峰命名法  或  _ 连接  或  -连接
 
 # 解决 IE6 的 png 问题
 
@@ -950,8 +967,9 @@ CSS 处理网页时, 它认为每个元素都包含在一个看不见的盒子�
 
 # IE6 双边距问题
 
-- 浮动的元素设置外边距, 在 IE6 里会变线双倍边距问题
-  - 解决: **display: inline;**
+浮动的元素设置外边距, 在 IE6 里会变线双倍边距问题
+
+- 解决: **display: inline;**
 
 # 默认值
 
@@ -974,14 +992,17 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
 
 # 百分比参照谁?
 
-- width、height
-  - 参照父元素(包含块)的 width、height
-- margin、padding
-  - <font color=#c40>**参照父元素(包含块)的 width**</font>
+width、height
+
+- 参照父元素(包含块)的 width、height
+
+margin、padding
+
+- <font color=#c40>**参照父元素(包含块)的 width**</font>
 
 # 三列布局
 
-- 两边固定, 中间自适应
+两边固定, 中间自适应
 
 - 定位实现(移动端用)
 
@@ -989,7 +1010,7 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
 
 ## 圣杯布局
 
-- 两边固定, 中间自适应
+两边固定, 中间自适应
 
 - 当中列要完整显示
 
@@ -1058,7 +1079,7 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
 
 ## 双飞翼布局
 
-- 不用定位
+不用定位
 
 - 与圣杯的区别
 
@@ -1124,7 +1145,7 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
 
 # 等高布局(伪等高)
 
-- margin 才能确定边界
+margin 才能确定边界
 
 - 核心
 
@@ -1195,7 +1216,7 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
 
 # 禁止系统默认滚动条
 
-- 默认的滚动条在 `文档` 身上, 不是 html, 也不是 body
+默认的滚动条在 `文档` 身上, 不是 html, 也不是 body
 
 - 方便自定义滚动条
 
@@ -1206,7 +1227,7 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
   }
   ```
 
-- ⚠️
+  ⚠️
 
   - 浏览器默认的滚动条是 **`文档`** 的, 不是 html 的, 也不是 body 的
   - 如果单独给 html 或者 body 设置 overflow: scroll , 滚动条还是会加给 `文档`
@@ -1252,83 +1273,84 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
 
 # Sticky Footer
 
-- 粘连布局
+粘连布局
 
-  - 我们有一块内容 <main>
+- 我们有一块内容 <main>
 
-  - 当 <main> 的高度足够长的时候,  <footer> 应该紧跟在 <main> 元素的后面
+- 当 <main> 的高度足够长的时候,  <footer> 应该紧跟在 <main> 元素的后面
 
-  - 当 <main> 的高度比较小的时候, 我们希望这个 <footer> 粘贴在页面底部
+- 当 <main> 的高度比较小的时候, 我们希望这个 <footer> 粘贴在页面底部
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>浮动</title>
-      <style type="text/css">
-        * {
-          margin: 0;
-          padding: 0;
-        }
-        html,
-        body {
-          height: 100%;
-        }
-        .box {
-          height: 100%;
-        }
-        .main {    
-          text-align: center;
-          background-color: pink;
-          padding-bottom: 50px;
-          min-height: 100%;
-          box-sizing: border-box;
-        }  
-        .footer {
-          height: 50px;
-          line-height: 50px;
-          text-align: center;
-          background-color: hotpink;
-          margin-top: -50px;
-        } 
-      </style>
-    </head>
-    <body>
-      <div class="box">
-        <div class="main">
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-          main<br>
-        </div>
-        <div class="footer">footer</div> 
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      .box {
+        height: 100%;
+      }
+      .main {    
+        text-align: center;
+        background-color: pink;
+        padding-bottom: 50px;
+        min-height: 100%;
+        box-sizing: border-box;
+      }  
+      .footer {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: hotpink;
+        margin-top: -50px;
+      } 
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="main">
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
+        main<br>
       </div>
-    </body>
-    </html>
-    ```
+      <div class="footer">footer</div> 
+    </div>
+  </body>
+  </html>
+  ```
 
 # BFC
 
-- Box Formatting Context —— 块级格式化上下文
+Box Formatting Context —— 块级格式化上下文
+
 - 是一个独立的渲染区域, 只有 `块级元素` 参与, 它规定了内部的 `块级元素` 如何布局
 
 - BFC 的布局规则
@@ -1347,7 +1369,7 @@ width:100% 并不包含 margin-left margin-right 的属性值，直接取其父�
 
 ## BFC 实现两列布局
 
-- 一列固定宽度, 另一列自适应
+一列固定宽度, 另一列自适应
 
 - 原理
 
@@ -1562,29 +1584,29 @@ function isIE(n) {
 
 # 省略号
 
-- 单行溢出显示省略号
+单行溢出显示省略号
 
-  - 元素得 `设置宽度`
+- 元素得 `设置宽度`
 
-    ```css
-    .box {
+  ```css
+  .box {
         text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap; /* 不换行 */  
-    }
-    ```
+      overflow: hidden;
+      white-space: nowrap; /* 不换行 */  
+  }
+  ```
 
-- 多行显示省略号
+多行显示省略号
 
-  - 可以指定显示几行
+- 可以指定显示几行
 
-    ```css
-    text-overflow: ellipsis;
-    overflow : hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;  // 指定几行
-    -webkit-box-orient: vertical;
-    ```
+  ```css
+  text-overflow: ellipsis;
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  // 指定几行
+  -webkit-box-orient: vertical;
+  ```
 
 # 通用 css 重置文件 base.css
 
@@ -1719,4 +1741,3 @@ function isIE(n) {
    clear: both;
  }
 ```
-

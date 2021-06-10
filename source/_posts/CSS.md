@@ -9,6 +9,7 @@ tags: CSS
 层叠样式表，通过样式表对网页进行装饰
 
 [CSS 参考手册](<http://www.w3school.com.cn/cssref/index.asp>)
+<!--more-->
 
 ## 样式表的组成
 

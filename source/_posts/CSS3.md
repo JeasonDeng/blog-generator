@@ -8,6 +8,8 @@ tags: CSS
 
 [选择器汇总](<http://www.w3school.com.cn/cssref/css_selectors.asp>)
 
+<!-- more -->
+
 ## 基本选择器
 
 1. id 选择器 (#)

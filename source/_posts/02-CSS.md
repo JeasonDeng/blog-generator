@@ -586,6 +586,14 @@ input:focus::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0);
 }
 ```
+# 设置 hr 的样式
+```css
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+```
 
 # 长度单位
 

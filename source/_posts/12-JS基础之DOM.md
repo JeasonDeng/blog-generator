@@ -2,7 +2,7 @@
 title: JS基础之DOM
 date: 2016-07-07 13:15:53
 updated: 2016-07-07 13:15:53
-tags: JS 基础
+tags: JS 之 DOM
 ---
 #  DOM介绍
 

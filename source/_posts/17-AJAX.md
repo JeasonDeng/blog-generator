@@ -2,7 +2,7 @@
 title: AJAX
 date: 2016-07-15 09:57:46
 updated: 2016-07-15 09:57:46
-tags: JS 请求
+tags: 请求与响应
 ---
 # 概述
 

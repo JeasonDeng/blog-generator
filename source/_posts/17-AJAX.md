@@ -13,7 +13,7 @@ Web 程序最初的目的就是将信息(数据)放到公共的服务器，让�
   - 特定元素的 href 或 src 属性
   - 表单提交
 - XMLHttpRequest 是 js 原生提供的 <font color=#c40>用来与服务器交互的核心对象类型</font>, ***使用 xhr 对象可以在不影响用户操作的情况下更新页面局部内容***
-- A JAX(Asynchronous JavaScript and XML)，最早出现在 2005 年的 Google Suggest，是在浏览器端进行网络编程(发送请求、接收响应)的技术方案，它使我们 `可以通过 JavaScript 直接获取服务端最新的内容而不必重新加载页面`。让 Web 更能接近桌面应用的用户体验
+- AJAX(Asynchronous JavaScript and XML)，最早出现在 2005 年的 Google Suggest，是在浏览器端进行网络编程(发送请求、接收响应)的技术方案，它使我们 `可以通过 JavaScript 直接获取服务端最新的内容而不必重新加载页面`。让 Web 更能接近桌面应用的用户体验
 - 说白了，<font color=#c40)>A JAX 就是浏览器提供的一套 API，可以通过 JavaScript 调用，从而实现通过代码控制请求与响应</font>。实现网络编程
 - 涉及 AJAX 请求的页面 ''不能 ''以 `文件协议方式` 访问
   - 因为 AJAX 默认不能发送不同源请求
@@ -22,7 +22,7 @@ Web 程序最初的目的就是将信息(数据)放到公共的服务器，让�
 
 # 快速上手
 
-使用 A JAX 的过程可以类比平常我们访问网页过程
+使用 AJAX 的过程可以类比平常我们访问网页过程
 ```js
 // 创建一个 XMLHttpRequest 类型的对象 ———— 相当于打开了一个浏览器 
 var xhr = new XMLHttpRequest()
@@ -298,7 +298,7 @@ console.log('after ajax')
 
 # jQuery 中的 AJAX
 
-jQuery 中有一套专门针对 A JAX 的封装，功能十分完善，经常使用，需要着重注意
+jQuery 中有一套专门针对 AJAX 的封装，功能十分完善，经常使用，需要着重注意
 
 - [参考](<http://www.lovean.com/doc/jquery1.12/jquery.ajax.html>)
 - [官网参考]()
